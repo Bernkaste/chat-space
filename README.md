@@ -21,8 +21,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :users_groups
--	has_many :groups, through: :users_groups 
--	has many :chats
+- has_many :groups, through: :users_groups
+- has_many :chats
 
 ## chatsテーブル
 
@@ -47,8 +47,8 @@ Things you may want to cover:
 
 ### Association
 - has_many :users_groups
--	has_many :users, through: :users_groups 
--	has many :chats
+- has_many :users, through: :users_groups
+- has_many :chats
 
 ## users_groupsテーブル
 
