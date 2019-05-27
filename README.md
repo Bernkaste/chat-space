@@ -15,8 +15,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|add_index :users, :name, null: false,  add_index :users, :name, unique: true|
-|email|string| add_index :users, :email, unique: true|
+|name|string|:name, index: true, null: false,  add_index :users, :name, unique: true|
+|email|string|:email, index: true, unique: true|
 |password|string| |
 
 ### Association
@@ -30,8 +30,8 @@ Things you may want to cover:
 |------|----|-------|
 |body|text| |
 |image|string| |
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 |created_at|datetime|null: false|
 |updated_at|datetime|null: false|
 
@@ -54,8 +54,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
