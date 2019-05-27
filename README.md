@@ -15,7 +15,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|:name, index: true, null: false,  add_index :users, :name, unique: true|
+|name|string|:name, index: true, null: false, add_index :users, :name, unique: true|
 |email|string|:email, index: true, unique: true|
 |password|string| |
 
