@@ -1,3 +1,23 @@
-@import "./reset";
+/*
+ *= require font-awesome
+ */
 
+@import "./reset";
 @import "./variable";
+@import "./mixin";
+
+.contents {
+  display: flex;
+  .chat-side {
+    height: 1090px;
+    width: 300px;
+    @import "./sidetop";
+    @import "./groups";
+  }
+  .chat-main {
+    height: 1000px;
+    width: calc(100% - 300px);
+    @import "./header";
+    @import "./message";
+  }
+}
