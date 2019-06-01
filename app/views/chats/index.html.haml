@@ -1,0 +1,58 @@
+.contents
+  .chat-side
+    .side-header
+      .side-header--user-name
+        test
+      .side-header--icon
+        = link_to root_path do
+          = fa_icon 'edit', class: 'icon'
+        
+        = link_to root_path do
+          = fa_icon 'cog', class: 'icon'
+    
+    .groups
+      .group1
+        .group1--group-name
+          test
+        .group1--latest-message
+          sample
+      .group2
+        .group2--group-name
+          test
+        .group2--latest-message
+          sample
+
+  .chat-main
+    .main-header
+      .current-group
+        .current-group--name
+          test
+        .current-group-member-list
+          .current-group-member-list--member
+            sample
+      .edit-btn 
+        = link_to 'Edit', root_path, class: "btn"
+    
+    .messages
+      .message1
+        .message1--user
+          test
+        .message1--text
+          sample
+      .message2
+        .message2--user
+          test
+        .message2--text
+          sample
+
+    .form
+      = form_for [@chat] do |f|
+        = f.text_field :body, class: 'form--message', placeholder: 'type a message'
+        .form--file
+          = f.label :image, class: 'form--file--image' do
+            = fa_icon 'image', class: 'icon'
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form--submit'
+
+      
+      
