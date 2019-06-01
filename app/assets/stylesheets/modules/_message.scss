@@ -1,62 +1,69 @@
-.messages {
-  background-color: #fafafa;
-  height: calc(100% - 190px);
-  padding: 46px 40px;
-  overflow: scroll;
-  .message1 {
-    padding-bottom: 40px;
-    &--user {
-      @include message-user ();
+.contents {
+  display: flex;
+  .chat-main {
+    height: 1000px;
+    width: calc(100% - 300px);
+    .messages {
+      background-color: #fafafa;
+      height: calc(100% - 190px);
+      padding: 46px 40px;
+      overflow: scroll;
+      .message1 {
+        padding-bottom: 40px;
+        &--user {
+          @include message-user ();
+        }
+        &--text {
+          @include message-text ();
+        }
+      }
+      .message2 {
+        padding-bottom: 40px;
+        &--user {
+          @include message-user ();
+        }
+        &--text {
+          @include message-text ();
+        }
+      }
     }
-    &--text {
-      @include message-text ();
-    }
-  }
-  .message2 {
-    padding-bottom: 40px;
-    &--user {
-      @include message-user ();
-    }
-    &--text {
-      @include message-text ();
-    }
-  }
-}
 
-.form {
-  background-color: #DDDDDD;
-  box-sizing: border-box;
-  height: 90px;
-  padding: 20px 50px 20px 40px;
-  &--message{
-    border: none;
-    box-sizing: border-box;
-    float: left;
-    height: 50px;
-    padding: 0 10px;
-    width: calc(100% - 150px);
-  }
-  &--file { 
-    background-color: $white-color;
-    float: left;
-    height: 50px;
-    padding-right: 10px;
-    &--image {
-      font-size: 20px;
-      line-height: 50px;
+    .form {
+      background-color: #DDDDDD;
+      box-sizing: border-box;
+      height: 90px;
+      padding: 20px 50px 20px 40px;
+      &--message{
+        border: none;
+        box-sizing: border-box;
+        float: left;
+        height: 50px;
+        padding: 0 10px;
+        width: calc(100% - 150px);
+      }
+      &--file { 
+        background-color: $white-color;
+        float: left;
+        height: 50px;
+        padding-right: 10px;
+        &--image {
+          font-size: 20px;
+          line-height: 50px;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+      &--submit {
+        background-color: $light-blue;
+        border: none;
+        color: $white-color;
+        float: right;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
     }
-    .hidden {
-      display: none;
-    }
-  }
-  &--submit {
-    background-color: $light-blue;
-    border: none;
-    color: $white-color;
-    float: right;
-    font-size: 16px;
-    height: 50px;
-    margin-left: 15px;
-    padding: 0 30px;
   }
 }

@@ -4,11 +4,11 @@
       .side-header--user-name
         test
       .side-header--icon
-        = link_to 'https://chat-space-proto.herokuapp.com/groups/new' do
-          %i.fas.fa-edit
+        = link_to chats_path, method: :get do
+          = fa_icon 'edit', class: 'icon'
         
-        = link_to 'https://chat-space-proto.herokuapp.com/users/61/edit' do
-          %i.fa.fa-cog
+        = link_to chats_path, method: :post do
+          = fa_icon 'cog', class: 'icon'
     
     .groups
       .group1
@@ -31,7 +31,7 @@
           .current-group-member-list--member
             sample
       .edit-btn 
-        = link_to 'Edit', "https://chat-space-proto.herokuapp.com/groups/1044/messages" , class: "btn"
+        = link_to 'Edit', chats_path, class: "btn"
     
     .messages
       .message1

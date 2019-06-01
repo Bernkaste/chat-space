@@ -1,36 +1,43 @@
-.main-header {
-  height: 100px;
-  background-color: $white-color;
-  padding: 0 40px;
+.contents {
   display: flex;
-  justify-content: space-between;
-  border:1px solid #eeeeee;
-  .current-group { 
-    padding-top: 35px;  
-    &--name {
-      font-size: 20px;
-      color: #333333;
-    }
-  }
-  .current-group-member-list {
-    margin: 15px;
-    &--member {
-      font-size: 12px;
-      margin-top: 15px;
-      color: #999999;
-    }
-  }
-  .edit-btn {
-    color: $light-blue;
-    display: block;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 20px;
-    margin-top: 28px;
-    border: solid 1px $light-blue;
-    .btn {
-      text-decoration: none;
-      color: $light-blue;
+  .chat-main {
+    height: 1000px;
+    width: calc(100% - 300px);
+    .main-header {
+      height: 100px;
+      background-color: $white-color;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      border:1px solid #eeeeee;
+      .current-group { 
+        padding-top: 35px;  
+        &--name {
+          font-size: 20px;
+          color: #333333;
+        }
+      }
+      .current-group-member-list {
+        margin: 15px;
+        &--member {
+          font-size: 12px;
+          margin-top: 15px;
+          color: #999999;
+        }
+      }
+      .edit-btn {
+        color: $light-blue;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin-top: 28px;
+        border: solid 1px $light-blue;
+        .btn {
+          text-decoration: none;
+          color: $light-blue;
+        }
+      }
     }
   }
 }

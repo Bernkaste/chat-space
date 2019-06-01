@@ -3,21 +3,10 @@
  */
 
 @import "./reset";
-@import "./variable";
-@import "./mixin";
+@import "./config/variable";
+@import "./mixin/mixin";
+@import "./modules/sidetop";
+@import "./modules/groups";
+@import "./modules/header";
+@import "./modules/message";
 
-.contents {
-  display: flex;
-  .chat-side {
-    height: 1090px;
-    width: 300px;
-    @import "./sidetop";
-    @import "./groups";
-  }
-  .chat-main {
-    height: 1000px;
-    width: calc(100% - 300px);
-    @import "./header";
-    @import "./message";
-  }
-}
