@@ -2,11 +2,11 @@
  *= require font-awesome
  */
 
-@import "./reset";
-@import "./config/variable";
-@import "./mixin/mixin";
-@import "./modules/sidetop";
-@import "./modules/groups";
-@import "./modules/header";
-@import "./modules/message";
-
+@import "reset";
+@import "config/variable";
+@import "mixins/mixin";
+@import "modules/flash";
+@import "modules/side_bar";
+@import "modules/group";
+@import "modules/message";
+@import "modules/user";

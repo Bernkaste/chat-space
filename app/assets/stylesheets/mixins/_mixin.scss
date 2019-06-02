@@ -1,0 +1,11 @@
+@mixin flexbox() {
+  display: flex;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
