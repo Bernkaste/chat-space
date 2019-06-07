@@ -34,12 +34,10 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
         $('.message').append(html);
-        $('.form')[0].reset();
+        $('.new_message')[0].reset();
         $( ".form__submit").prop( "disabled", false );
 
         $('.messages').animate({ scrollTop: $(".messages")[0].scrollHeight }, "fast");
-
-        $('.form__message').val('')
     })
     
     .fail(function(){
