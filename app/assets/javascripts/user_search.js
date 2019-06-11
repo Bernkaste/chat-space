@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function() {
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${id} data-id=${id} '>
                   <input name='group[user_ids][]' type='hidden' value='${id}'>
                   <p class='chat-group-user__name'>${name}</p>
-                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove data-user-id="${id}" js-remove-btn'>削除</a>
                 </div>`
     return html;
   }
@@ -46,7 +46,7 @@ $(document).on('turbolinks:load', function() {
     $(this).parent('.chat-group-user').remove();
   });
   
-  $("#chat-group-users").on("click",".user-search-remove", function() {
+  $("#chat-group-users").on("click",".chat-group-user__btn--remove", function() {
   $(this).parent().remove();
   });
 });
