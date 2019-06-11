@@ -4,10 +4,10 @@ $(function(){
     var html = `<div class="message" id='${message.id}'>
                   <div class="upper-message" >
                     <div class="upper-message__user-name">
-                      ${message.name}
+                      ${message.user_name}
                     </div>
                     <div class="upper-message__date">
-                      ${message.date}
+                      ${message.created_at}
                     </div>
                   </div>
                   <div class="lower-message">
